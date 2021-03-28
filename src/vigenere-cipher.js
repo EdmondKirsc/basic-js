@@ -40,7 +40,7 @@ class VigenereCipheringMachine {
       			encryptedText += text[i]
     		}
   		}
-      if (this.pepemennay === false) {
+      if(!(this.isDirect)) {
         encryptedText = encryptedText.split("").reverse().join("");
       }
 		return encryptedText;
@@ -64,6 +64,9 @@ class VigenereCipheringMachine {
       			decryptedText += text[i]
     		}
   		}
+      if(!(this.isDirect)) {
+        decryptedText = decryptedText.split("").reverse().join("");
+      }
   		return decryptedText;
 	}
 }
